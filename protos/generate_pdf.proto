@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message GeneratePDF {
+  repeated string pdf_ids = 1;
+}

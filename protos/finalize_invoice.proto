@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message FinalizeInvoice {
+  repeated string invoice_ids = 1;
+}
