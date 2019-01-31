@@ -4,6 +4,12 @@ Have one server sending HTTP requests to two services, using protocol buffers as
 
 This also serves as a proof of concept as we can achieve polymorphic types with protobuf.
 
+# INDEX
+  * [How it works](#How-it-works)
+  * [How to use this](#How-to-use-this)
+  * [Requirements](#Requirements)
+  * [Install](#Install)
+
 ## How it works
 
 * `v2_requests_router.rb` receives a `GET` request.
@@ -18,13 +24,13 @@ This also serves as a proof of concept as we can achieve polymorphic types with 
   * Both are listening for a `POST`
   * Both decode the message, encoded as a protocol buffer
 
-## Requirements
+# Requirements
 
 * Protobuf. [check installation guide](https://github.com/protocolbuffers/protobuf)
 * Ruby (this was tested with version 2.4)
 * Bundler
 
-## Install
+# Install
 
 `bundle install`
 
@@ -33,15 +39,12 @@ This also serves as a proof of concept as we can achieve polymorphic types with 
 * Move to protos folder `cd protos`
 * Generate classes `protoc --ruby_out=./ *.proto`
 
-## Run the 3 services
+## How to use this
 
 * open 3 consoles
 * `ruby v2_requests_router.rb`
 * `ruby pdf_service.rb`
 * `ruby finalize_service.rb`
-
-### Send requests to `V2 requests router`
-
 * Example of request to finalize invoices
   * `curl -X GET 'http://localhost:4567/finalize-invoices?invoice_ids[]=124124,62322'`
 * Example of request to generate PDF
