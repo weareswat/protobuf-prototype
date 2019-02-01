@@ -23,6 +23,7 @@ This also serves as a proof of concept as we can achieve polymorphic types with 
 ### PDF Service and Finalize Service
   * Both are listening for a `POST`
   * Both decode the message, encoded as a protocol buffer
+  * Both display the message received on the console using `puts`
 
 # Requirements
 
