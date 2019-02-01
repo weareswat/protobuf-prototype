@@ -39,6 +39,7 @@ This also serves as a proof of concept as we can achieve polymorphic types with 
 
 * Move to protos folder `cd protos`
 * Generate classes `protoc --ruby_out=./ *.proto`
+  * this command compiles all the files named `*.proto` as ruby files, and saves the ruby files in the `--ruby_out` path
 
 ## How to use this
 
